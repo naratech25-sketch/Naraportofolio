@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Narcisse Bolimo — Portfolio</title>
+  <meta name="description" content="Narcisse Bolimo — Informaticien spécialisé en programmation web et outils d'IA. Portfolio une page." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{--bg:#0b0b0b;--card:#0f0f0f;--gold:#d4af37;--muted:#bfbfbf}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#fff;scroll-behavior:smooth;}
+    a{color:var(--gold);text-decoration:none;transition: color 0.3s;}
+    a:hover{color:#fff;}
+
+    /* Header */
+    header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.15));z-index:50;}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#b08b2e);display:flex;align-items:center;justify-content:center;font-weight:700;color:#091;box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+
+    /* Blur du reste de la page quand menu hamburger ouvert */
+    body.menu-open main {
+      filter: blur(5px);
+      transition: filter 0.3s ease;
+    }
+
+    h1{font-size:34px;margin-bottom:10px;color:var(--gold);letter-spacing:0.4px;opacity:0;transform:translateY(30px);transition: all 0.8s ease;}
+    h2{margin:0;color:#fff;opacity:0;transform:translateY(30px);transition: all 0.8s ease 0.2s;}
+    p.lead{color:var(--muted);line-height:1.5;margin:12px 0 18px;opacity:0;transform:translateY(30px);transition: all 0.8s ease 0.4s;}
+    .btn{background:var(--gold);color:#0b0b0b;padding:10px 16px;border-radius:8px;font-weight:600;border:none;cursor:pointer;transition: all 0.3s;}
+    .btn:hover{transform:scale(1.05);}
+    .btn.ghost{background:transparent;border:1px solid rgba(212,175,55,0.14);color:var(--gold);}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition: all 0.3s;opacity:0;transform:translateY(20px);}
+    .card:hover{transform:translateY(-5px) scale(1.02);}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:14px;transition: background 0.3s;}
+    .skill:hover{background:rgba(212,175,55,0.2);}
+    section{padding:58px 0;border-top:1px solid rgba(255,255,255,0.02);}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+    footer{padding:30px 0;color:var(--muted);text-align:center;}
+    .fade-in{opacity:1 !important;transform:translateY(0) !important;}
+  </style>
+</head>
+<body>
+  <!-- Header avec Bootstrap -->
+  <header class="mb-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <div class="logo">NB</div>
+          <div>
+            <div style="font-weight:700">Narcisse Bolimo</div>
+            <div style="font-size:12px;color:var(--muted)">Informaticien — Programmation web & IA</div>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:100px;">
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+      <div class="hero-inner d-lg-flex gap-4 align-items-center">
+        <div>
+          <h1>Je conçois des expériences web performantes mêlant code, IA et pédagogie.</h1>
+          <h2>Narcisse Bolimo — Informaticien & Formateur</h2>
+          <p class="lead">Licencié en Informatique et technologies à l’Institut Supérieur et Pédagogique de Gombe. Passionné par la programmation web et les outils d’intelligence artificielle (ChatGPT, Gemini, DeepSeek). J'accompagne la transformation numérique des structures en alliant technique et pédagogie — j'aime transmettre clairement pour rendre la technologie accessible.</p>
+          <div class="cta d-flex gap-2">
+            <a class="btn" href="#projets">Voir mes projets</a>
+            <a class="btn ghost" href="#contact">Me contacter</a>
+          </div>
+          <div style="margin-top:14px;color:var(--muted);font-size:14px">Site de démonstration : <a href="https://basuanarat.netlify.app/" target="_blank" rel="noopener">basuanarat.netlify.app</a></div>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin:0 0 8px;color:var(--gold)">Compétences clés</h3>
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP & MySQL</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Outils IA (ChatGPT, Gemini, DeepSeek)</div>
+            <div class="skill">Conception pédagogique</div>
+            <div class="skill">Optimisation & performance</div>
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            <strong>Email:</strong> <a href="mailto:narcisseemenge@gmail.com">narcisseemenge@gmail.com</a><br>
+            <strong>Téléphone:</strong> <a href="tel:+00243903176025">00243903176025</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences">
+      <h3 style="color:var(--gold);margin-bottom:8px">Compétences</h3>
+      <p style="color:var(--muted);margin-bottom:18px">Compétences techniques et pédagogiques mises au service de projets web et de formations.</p>
+      <div class="card">
+        <ul style="margin:0 0 0 18px;color:var(--muted)">
+          <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, JavaScript (vanilla)</li>
+          <li><strong>Backend:</strong> PHP, MySQL, logique serveur et intégration</li>
+          <li><strong>IA:</strong> Prompting et intégration d'outils (ChatGPT, Gemini, DeepSeek) pour automatiser et enrichir les services</li>
+          <li><strong>Pédagogie:</strong> Conception de modules de formation, création de supports clairs et exercices progressifs</li>
+          <li><strong>Outils:</strong> Git, VS Code, phpMyAdmin, outils de déploiement (Netlify, hébergement web)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets">
+      <h3 style="color:var(--gold);margin-bottom:8px">Projets</h3>
+      <p style="color:var(--muted);margin-bottom:18px">Voici quelques réalisations et démonstrations accessibles en ligne.</p>
+      <div class="projects-grid">
+        <article class="card">
+          <h4 style="margin-bottom:8px">BasuaNaraT (site de démonstration)</h4>
+          <p style="color:var(--muted);margin-bottom:12px">Site déployé sur Netlify présentant des exemples de travaux web. (Design & intégration front-end)</p>
+          <a href="https://basuanarat.netlify.app/" target="_blank" rel="noopener" class="btn">Visiter</a>
+        </article>
+        <article class="card">
+          <h4 style="margin-bottom:8px">Projet: Gestion de stock (exemple)</h4>
+          <p style="color:var(--muted);margin-bottom:12px">Application PHP/MySQL pour gérer produits, entrées/sorties et utilisateurs — idéale comme démonstration de compétences backend.</p>
+          <div style="font-size:13px;color:var(--muted)">Disponible sur demande (preview / code)</div>
+        </article>
+        <article class="card">
+          <h4 style="margin-bottom:8px">Formation & Ateliers</h4>
+          <p style="color:var(--muted);margin-bottom:12px">Conception de modules pour former sur HTML, CSS, PHP, et l’utilisation pratique des outils d’IA en entreprise.</p>
+          <div style="font-size:13px;color:var(--muted)">Sessions en présentiel ou à distance.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+      <h3 style="color:var(--gold);margin-bottom:8px">Contact</h3>
+      <p style="color:var(--muted);margin-bottom:18px">Pour une collaboration, une formation ou une offre de projet :</p>
+      <div class="card d-flex flex-column gap-2">
+        <div><strong>Email:</strong> <a href="mailto:narcisseemenge@gmail.com">narcisseemenge@gmail.com</a></div>
+        <div><strong>Téléphone / WhatsApp:</strong> <a href="tel:+00243903176025">00243903176025</a></div>
+        <div style="color:var(--muted);font-size:13px">Basé à Kinshasa — Disponible pour missions et formations.</div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="font-size:13px;color:var(--muted)">© "Narcisse Bolimo" — Informaticien | Programmation web & IA</div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href=a.getAttribute('href');
+        if(href.startsWith('#')){
+          e.preventDefault();
+          document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('h1, h2, p.lead, .card');
+    const appearOptions = {threshold:0.1, rootMargin:"0px 0px -50px 0px"};
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+    faders.forEach(fader=>{appearOnScroll.observe(fader);});
+
+    // Blur background when navbar collapse is open
+    const navbarCollapse = document.querySelector('#navbarNav');
+    navbarCollapse.addEventListener('show.bs.collapse', () => {document.body.classList.add('menu-open');});
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {document.body.classList.remove('menu-open');});
+  </script>
+</body>
+</html>
